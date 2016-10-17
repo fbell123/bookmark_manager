@@ -1,6 +1,4 @@
-#CRUD
-
-##Create, Read, Update, Delete
+#CRUD - ##Create, Read, Update, Delete
 
 ###Basic level
 
@@ -8,9 +6,7 @@ CRUD describes the 4 basic capabilities(see above) you can utilise on a set of d
 
 ***
 
-#SQL
-
-##Structured Query Language
+#SQL - ##Structured Query Language
 
 ###Basic level
 
