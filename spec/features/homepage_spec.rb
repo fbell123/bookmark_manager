@@ -2,13 +2,15 @@ require 'spec_helper'
 
 
 feature 'See all links' do
-  Link.create(url: 'http://www.makersacademy.com', title: 'Makers Academy')
 
   scenario 'list all bookmarks' do
-    visit '/links'
+
+    add_link
     expect(page.status_code).to eq 200
+
     within 'ul#links' do
-      expect(page).to have_content('Makers Academy')
+      expect(page).to have_content('Google')
+      
     end
   end
 end
