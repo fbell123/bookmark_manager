@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 
-feature 'homepage' do
+feature 'See all links' do
   Link.create(url: 'http://www.makersacademy.com', title: 'Makers Academy')
 
   scenario 'list all bookmarks' do
