@@ -5,8 +5,9 @@ ENV["RACK_ENV"] ||= "development"
 require './lib/app/models/link'
 
 class BookmarkManager < Sinatra::Base
+  
   get '/' do
-    'Hello BookmarkManager!'
+    redirect '/links/new'
   end
 
   get '/links' do
