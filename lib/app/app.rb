@@ -1,4 +1,7 @@
 require 'sinatra/base'
+
+ENV["RACK_ENV"] ||= "development"
+
 require './lib/app/models/link'
 
 class BookmarkManager < Sinatra::Base
@@ -16,7 +19,6 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/links' do
-    p Link.all
     Link.create(url: params[:url], title: params[:title])
     redirect '/links'
   end
