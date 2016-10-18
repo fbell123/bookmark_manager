@@ -1,3 +1,4 @@
-
-<%= @links.title %>
-<%= @links.url %>
+<% @links.each do |link| %>
+<%= link.title %>
+<%= link.url %>
+<% end %>
