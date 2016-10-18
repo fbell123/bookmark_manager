@@ -1,4 +1,6 @@
 #Bookmark manager
+This is a web app built on Sinatra with Ruby. 
+
 
 ##User stories:
 
