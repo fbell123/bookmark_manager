@@ -3,7 +3,6 @@ require 'spec_helper'
 feature 'be able to add new links' do
 
   before :each do
-    Link.all.destroy
     new_link
   end
 

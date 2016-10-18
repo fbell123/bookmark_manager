@@ -4,8 +4,7 @@ require 'spec_helper'
 feature "link display" do
 
   before :each do
-    Link.create(url: "www.google.com", title: "google")
-    visit '/links'
+    new_link
   end
 
   scenario 'displays the page' do
@@ -15,5 +14,4 @@ feature "link display" do
   scenario "user is able to save a link" do
     expect(page).to have_text('google')
   end
-
 end

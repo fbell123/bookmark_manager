@@ -8,7 +8,6 @@ class BookmarkManager < Sinatra::Base
 
   get '/links' do
     @links = Link.all
-    p @links.inspect
     erb :'links/index'
   end
 
@@ -17,7 +16,9 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/links' do
-
+    p Link.all
+    Link.create(url: params[:url], title: params[:title])
+    redirect '/links'
   end
 
   # start the server if ruby file executed directly
