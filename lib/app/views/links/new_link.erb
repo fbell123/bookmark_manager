@@ -1,7 +1,74 @@
+<!-- <head>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="css_styles/index.css">
+</head> -->
+
+<style>
+
+h1 {
+  text-align: center;
+  color: white;
+  letter-spacing: 1px;
+}
+
+body {
+  justify-content: center;
+  text-align: center;
+  background-color: #9E3414;
+}
+
+input[type="submit"] {
+  display: inline-block;
+  height: 75px;
+  width: 75px;
+}
+
+.central_content {
+  justify-content: center;
+  display: inline-block;
+  text-align: center;
+  background-color: #A34C1E;
+  height: 50%;
+  width: 50%;
+}
+
+.title_input {
+  padding-top: 5px;
+  height: 35%;
+  width: 100%;
+  
+}
+
+.url_input {
+  height: 35%;
+  width: 100%;
+
+}
+
+
+</style>
+
+
 <body>
+
+  <h1> Enter website and bookmark title </h1>
+
+<div class="central_content">
+
   <form action="/links" method="post">
-    <input type="text" name="title" placeholder="title">
-    <input type="text" name="url" placeholder="url">
-    <input type="submit" name="add link" value="add link">
+
+    <div class="title_input">
+      <input type="text" name="title" placeholder="Enter title">
+    </div>
+
+    <div class="url_input">
+      <input type="text" name="url" placeholder="Enterl url">
+    </div>
+
+    <div>
+      <input type="submit" name="add link" value="add link">
+    </div>
   </form>
+</div>
+
 </body>

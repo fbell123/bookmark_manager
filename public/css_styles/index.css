@@ -1,0 +1,22 @@
+
+body {
+  background-color: #5C1E0C;
+}
+
+.central_content {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.title_input {
+
+}
+
+.url_input {
+
+}
+
+.button {
+
+}
