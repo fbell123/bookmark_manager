@@ -4,6 +4,7 @@ require File.join(File.dirname(__FILE__), './lib/app/app.rb')
 
 run BookmarkManager
 
+listen_addresses='*'
 
 configure :development do
   DataMapper::Logger.new($stdout, :debug)
