@@ -21,7 +21,7 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/links' do
-    tag_split = params[:tag].split(',')
+    tag_split = params[:tag].split(',').map!(&:strip)
     link = Link.create(url: params[:url], title: params[:title])
     tag_split.each do |tag|
       link.tags << Tag.first_or_create(name: tag)
