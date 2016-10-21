@@ -19,3 +19,11 @@ def create_multi_links
   fill_in 'tag', :with => 'Search engine'
   click_button 'Add link'
 end
+
+def create_link_with_multiple_tags
+  visit '/links/new'
+  fill_in 'title', :with => 'Makers Academy'
+  fill_in 'url', :with => 'http://www.makersacademy.com'
+  fill_in 'tag', :with => 'Makers, education'
+  click_button 'Add link'
+end

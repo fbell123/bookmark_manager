@@ -9,6 +9,7 @@ require 'dm-rspec'
 require 'web_helpers'
 require './app/models/link'
 require './app/models/tag'
+require './app/app'
 
 Capybara.app = BookmarkManager
 
