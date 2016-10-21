@@ -1,4 +1,4 @@
-require_relative '../app/models/link'
+require 'spec_helper'
 
 feature 'Viewing links' do
 

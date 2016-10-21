@@ -1,11 +1,26 @@
-<h1> Links </h1>
+<h1> Bookmarks </h1>
+
+<div class="button">
+  <form action="links/new" method="get" >
+      <input type="submit" value="Add bookmark"><br><br>
+    </div>
+  </form>
+</div>
+
+<div class="button">
+  <form action="/tags/:name" method="get" >
+    <input type="text" name="tags" >
+      <input type="submit" value="Search"><br><br>
+    </div>
+  </form>
+</div>
 
 <ul id='links'>
   <% @links.each do |link| %>
     <li>
-      Title: <%= link.title %>
-      URL:   <%= link.url   %>
-      Tag:   <%= link.tags.map(&:name).join(',') %>
+      Title: <%= link.title %> <br>
+      URL:   <%= link.url   %> <br>
+      Tag:   <%= link.tags.map(&:name).join(',') %><br><br>
     </li>
   <% end %>
 </ul>

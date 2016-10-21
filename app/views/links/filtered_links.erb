@@ -1,0 +1,12 @@
+<html>
+  <h1><%= @tag_name %></h1>
+
+  <ul id='links'>
+    <% @links.each do |link| %>
+      <li>
+        Title: <%= link.title %> <br>
+        URL:   <%= link.url   %> <br><br>
+      </li>
+    <% end %>
+  </ul>
+</html>
