@@ -1,3 +1,5 @@
+#https://git.heroku.com/sheltered-lowlands-62761.git
+
 require 'sinatra/base'
 require_relative 'models/link'
 require_relative 'models/tag'
@@ -7,6 +9,7 @@ ENV['RACK_ENV'] ||= 'development'
 
   get '/links' do
     @links = Link.all
+    p @links
     erb :'links/index'
   end
 
@@ -15,11 +18,13 @@ ENV['RACK_ENV'] ||= 'development'
   end
 
   post '/links' do
-    title = params[:title]
-    url = params[:url]
-    tag = params[:tag]
-    Link.create(url: url, title: title)
-    Tag.create(name: tag)
+    link = Link.create(url: params[:url], title: params[:title])
+    p link
+    tag = Tag.create(name: params[:tag])
+    p tag
+    # linktags = LinkTags.all
+    link.tags << tag
+    link.save
     redirect to '/links'
   end
 
