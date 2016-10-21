@@ -1,8 +1,7 @@
 #https://git.heroku.com/sheltered-lowlands-62761.git
 
 require 'sinatra/base'
-require_relative 'models/link'
-require_relative 'models/tag'
+require_relative 'data_mapper_setup'
 
 class BookmarkManager < Sinatra::Base
 ENV['RACK_ENV'] ||= 'development'
@@ -30,7 +29,3 @@ ENV['RACK_ENV'] ||= 'development'
 
   run! if app_file == $0
 end
-
-DataMapper.setup(:default, ENV["DATABASE_URL"] || "postgres://localhost/bookmark_manager_#{ENV['RACK_ENV']}")
-DataMapper.finalize
-DataMapper.auto_upgrade!
