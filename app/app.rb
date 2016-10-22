@@ -11,6 +11,10 @@ class BookmarkManager < Sinatra::Base
     redirect '/links'
   end
 
+  get '/signup' do
+    erb :'links/signup'
+  end
+
   get '/links' do
     @links = Link.all
     erb :'links/index'

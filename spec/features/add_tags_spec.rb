@@ -19,7 +19,7 @@ feature 'Adding tags' do
     link = Link.first
 
     within 'ul#links' do
-      expect(link.tags.map(&:name)).to include('Makers', ' education')
+      expect(link.tags.map(&:name)).to include('Makers', 'education')
     end
 
   end
